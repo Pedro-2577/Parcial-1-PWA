@@ -1,0 +1,33 @@
+body {
+ /* height: 150px;
+  background: yellow;
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(fotos/gris.png);
+  background-size: 1600px 800px;
+}
+
+
+section{
+  background: url(fotos/gris.png);
+  width: 70%;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  max-width: 418px;
+  min-width: 200px;
+}
+
+img{
+  background: url(fotos/gris.png);
+}
+
+h3{
+  display: ruby-text-container;
+}
+
+img{
+  margin: 5px;
+}
