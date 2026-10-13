@@ -1,43 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Pedro Mendez - dwn3a - PWA</title>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Consulta el clima actual de cualquier ciudad.">
+    <title>Clima | Aplicación PWA</title>
+    <link rel="stylesheet" href="recursos/main.css">
+  </head>
+  <body>
+    <main class="weather-app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">PWA · Parcial 1</p>
+          <h1>Clima en cualquier lugar.</h1>
+        </div>
+        <span class="status-dot" aria-label="Aplicación disponible sin conexión"></span>
+      </header>
 
-        <meta charset="UTF-8">
+      <section class="search-card" aria-labelledby="search-title">
+        <p class="section-label" id="search-title">Buscar ubicación</p>
+        <form id="weather-form" class="search-form">
+          <label class="sr-only" for="search">Ciudad</label>
+          <input id="search" name="city" type="search" placeholder="Ej. Buenos Aires" autocomplete="off" required>
+          <button type="submit">Consultar <span aria-hidden="true">→</span></button>
+        </form>
+        <p id="message" class="message" role="status">Consultá una ciudad para ver sus condiciones actuales.</p>
+      </section>
 
-        <link rel="stylesheet" type="text/css" href="recursos/main.css">
-        <link rel="shortcut icon" href="recursos/fotos/icon.png" />
-    </head>
-    <body>
-        <section>
-            <div class="centro">
-                <h3 class="cuidad">La app de clima</h3><img src=" " alt=" " width="50px" height="50px">
-                <form>
-                    <label for="search">Busca una cuidad:</label>
-                    <input title="Search" id="search" value="" type="text" required/>
+      <section id="weather-card" class="weather-card is-empty" aria-live="polite">
+        <div class="weather-placeholder">
+          <span class="placeholder-icon" aria-hidden="true">☼</span>
+          <h2>Tu próximo destino, bajo control.</h2>
+          <p>Temperatura, humedad, viento y pronóstico actualizados en segundos.</p>
+        </div>
+      </section>
 
-                    <button id="sendButton" type="button">Enviar</button>
-                </form>
-            </div>
-            <div class="centro">
-                <div><p>Temperatura actual en <strong class="cuidad">---</strong> es <strong class="temp">0</strong>°</p></div>
-
-                <div><p>Sensacion termica <strong class="temp_feel">0</strong>°</p></div>
-
-                <div><p>Temperatura minima <strong class="temp_min">0</strong>°</p></div>
-
-                <div><p>Temperatura maxima <strong class="temp_max">0</strong>°</p></div>
-
-                <div><p>Temperatura maxima <strong class="humedad">0</strong>%</p></div>
-
-                <div><p>Presión atmosférica <strong class="presion">0</strong></p></div>
-
-                <div><p>Velocidad de viento <strong class="viento">0</strong> Km/h</p></div>
-
-                
-            </div>
-        </section>
-        <div id="main"></div>
-        <script src="recursos/main.js"></script>  
-    </body>
+      <footer>
+        <span>Datos meteorológicos: Open-Meteo</span>
+        <span>Hecho con JavaScript</span>
+      </footer>
+    </main>
+    <script src="recursos/main.js"></script>
+  </body>
 </html>
